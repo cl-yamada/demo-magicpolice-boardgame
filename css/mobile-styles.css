@@ -1,25 +1,57 @@
-/* スマホ版向けのスタイル */
-body {
-    background-color: #f9f9f9;
-    font-size: 14px;
-    padding: 10px;
-}
-
-header {
+/* ハンバーガーメニュー */
+#hamburger-menu {
+    display: none; /* 初期状態では非表示 */
+    cursor: pointer;
     flex-direction: column;
+    justify-content: space-around;
+    width: 30px;
+    height: 30px;
 }
 
-header h1 {
-    font-size: 18px;
+#hamburger-menu span {
+    background-color: #fff;
+    height: 3px;
+    width: 100%;
+    margin-bottom: 5px;
 }
 
-nav ul {
-    flex-direction: column;
-}
+/* スマホ版用スタイル */
+@media screen and (max-width: 768px) {
+    /* ヘッダーのナビゲーションを非表示にし、ハンバーガーメニューを表示 */
+    nav ul {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        right: 20px;
+        top: 60px;
+        background-color: #333;
+        padding: 10px;
+        width: 200px;
+    }
 
-nav ul li {
-    margin-left: 0;
-    margin-bottom: 10px;
-}
+    nav ul.open {
+        display: flex;
+    }
 
-/* その他、スマホ版向けのスタイルを追加 */
+    #hamburger-menu {
+        display: flex;
+    }
+
+    header {
+        justify-content: space-between;
+    }
+
+    nav ul li {
+        margin-bottom: 10px;
+    }
+
+    nav ul li a {
+        color: #fff;
+        text-decoration: none;
+        font-size: 16px;
+    }
+
+    nav ul li a:hover {
+        color: #ddd;
+    }
+}

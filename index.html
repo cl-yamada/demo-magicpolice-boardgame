@@ -14,7 +14,12 @@
     <header>
         <h1>ボードゲーム版 魔法捜査官</h1>
         <nav>
-            <ul>
+            <div id="hamburger-menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <ul id="nav-links">
                 <li><a href="#how-to-play">遊び方</a></li>
                 <li><a href="#ending">エンディング</a></li>
             </ul>
@@ -77,6 +82,13 @@
     </footer>
 
     <script>
+        // ハンバーガーメニューの開閉
+        const hamburgerMenu = document.getElementById('hamburger-menu');
+        const navLinks = document.getElementById('nav-links');
+        hamburgerMenu.addEventListener('click', () => {
+            navLinks.classList.toggle('open');
+        });
+
         // 閲覧環境を表示し、切り替えるスクリプト
         const pcViewLink = document.getElementById('pc-view');
         const mobileViewLink = document.getElementById('mobile-view');
