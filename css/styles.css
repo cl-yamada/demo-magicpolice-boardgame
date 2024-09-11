@@ -159,13 +159,13 @@ footer {
 /* フッター内のリンク風表示 */
 .view-link {
     cursor: pointer;
-    color: #00f;
+    color: #fff; /* リンクを白に変更 */
     text-decoration: underline;
     margin: 0 5px;
 }
 
 .view-link:hover {
-    color: #0056b3;
+    color: #ddd; /* ホバー時に少し灰色がかった色に */
     text-decoration: none;
 }
 

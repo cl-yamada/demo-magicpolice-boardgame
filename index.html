@@ -76,10 +76,9 @@
     <!-- ページフッター -->
     <footer>
         <p id="view-switcher">
-            <span id="pc-view" class="view-link">PC版</span> | 
-            <span id="mobile-view" class="view-link">スマホ版</span>
+            <span id="toggle-view" class="view-link">PC版に切り替え</span> <!-- ここが動的に切り替わる -->
         </p>
-        <p id="version-info">サイトバージョン: v1.0.0</p> <!-- バージョン情報を表示 -->
+        <p id="version-info">サイトバージョン: v1.0.1</p> <!-- バージョン情報を表示 -->
     </footer>
 
     <script>
@@ -91,38 +90,45 @@
         });
 
         // 閲覧環境を表示し、切り替えるスクリプト
-        const pcViewLink = document.getElementById('pc-view');
-        const mobileViewLink = document.getElementById('mobile-view');
+        const toggleViewLink = document.getElementById('toggle-view');
         const mobileStylesheet = document.getElementById('mobile-stylesheet');
         const pcStylesheet = document.getElementById('pc-stylesheet');
 
-        // 初期状態を設定
+        // 初期状態を判定（スマホ版かPC版か）
         let isMobileView = window.innerWidth <= 768;
 
-        // 状態に応じてスタイルを適用
-        function updateView() {
+        // 初期表示に応じてボタンのテキストを設定
+        function updateToggleText() {
             if (isMobileView) {
-                mobileStylesheet.disabled = false;
-                pcStylesheet.disabled = true;
+                toggleViewLink.textContent = 'PC版に切り替え';
             } else {
-                mobileStylesheet.disabled = true;
-                pcStylesheet.disabled = false;
+                toggleViewLink.textContent = 'スマホ版に切り替え';
             }
         }
 
-        // リンクをクリックしたときに表示を切り替える
-        pcViewLink.addEventListener('click', () => {
-            isMobileView = false;
-            updateView();
-        });
+        // ビューの切り替え
+        function toggleView() {
+            isMobileView = !isMobileView;
 
-        mobileViewLink.addEventListener('click', () => {
-            isMobileView = true;
-            updateView();
-        });
+            if (isMobileView) {
+                // スマホ版を有効にし、PC版を無効にする
+                mobileStylesheet.disabled = false;
+                pcStylesheet.disabled = true;
+            } else {
+                // PC版を有効にし、スマホ版を無効にする
+                mobileStylesheet.disabled = true;
+                pcStylesheet.disabled = false;
+            }
 
-        // ページ読み込み時にビューを設定
-        updateView();
+            // ボタンのテキストを更新
+            updateToggleText();
+        }
+
+        // 初期表示の設定
+        updateToggleText();
+
+        // ボタンをクリックしたときに表示を切り替える
+        toggleViewLink.addEventListener('click', toggleView);
     </script>
 
 </body>
