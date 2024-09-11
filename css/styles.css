@@ -148,6 +148,7 @@ nav ul li a:hover {
 /* フッターを中央揃え */
 footer {
     display: flex;
+    flex-direction: column; /* 要素を縦に並べる */
     justify-content: center;
     align-items: center;
     padding: 20px;
@@ -166,4 +167,11 @@ footer {
 .view-link:hover {
     color: #0056b3;
     text-decoration: none;
+}
+
+/* バージョン情報のスタイル */
+#version-info {
+    margin-top: 10px;
+    font-size: 12px;
+    color: #bbb; /* バージョン情報を少し目立たなくする */
 }
