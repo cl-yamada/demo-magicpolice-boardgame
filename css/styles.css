@@ -1,0 +1,169 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+    color: #333;
+    padding: 20px;
+    padding-top: 80px; /* ヘッダーの高さに合わせて調整 */
+}
+
+/* ヘッダーのデザイン */
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1000;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+header h1 {
+    font-size: 20px;
+    margin-left: 20px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    margin-right: 20px;
+}
+
+nav ul li {
+    margin-left: 20px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 16px;
+    padding: 10px 15px;
+    transition: background 0.3s ease;
+}
+
+nav ul li a:hover {
+    background-color: #555;
+    border-radius: 5px;
+}
+
+/* タイトルロゴ */
+.logo {
+    text-align: center;
+    margin: 100px 0; /* ヘッダー分のスペースを確保 */
+}
+
+.logo img {
+    max-width: 300px;
+    height: auto;
+}
+
+/* セクションのデザイン */
+.prologue, .how-to-play, .ending {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.how-to-play img, .ending img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+/* エンディング内のQRコードを縦並びにする */
+.ending .qr-codes {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.ending .qr-codes div {
+    margin-bottom: 20px;
+}
+
+/* レスポンシブデザイン - スマホ版のスタイル */
+@media screen and (max-width: 768px) {
+    header {
+        flex-direction: column; /* ヘッダー内の要素を縦に並べる */
+        align-items: flex-start;
+        padding: 10px;
+    }
+
+    header h1 {
+        font-size: 18px;
+        margin: 0 0 10px 0;
+    }
+
+    nav ul {
+        flex-direction: column; /* ナビゲーションのリンクを縦に並べる */
+        margin-right: 0;
+    }
+
+    nav ul li {
+        margin-left: 0;
+        margin-bottom: 10px;
+    }
+
+    nav ul li a {
+        font-size: 14px;
+        padding: 8px 12px;
+    }
+
+    .logo img {
+        max-width: 200px; /* ロゴサイズを小さめに */
+    }
+
+    .prologue, .how-to-play, .ending {
+        margin-bottom: 20px;
+    }
+
+    .how-to-play img, .ending img {
+        margin-bottom: 5px;
+    }
+}
+
+/* レスポンシブデザイン - PC版のスタイル */
+@media screen and (min-width: 769px) {
+    /* PC向けのスタイル調整 */
+    .prologue, .how-to-play, .ending {
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+    
+    .logo {
+        margin: 50px 0;
+    }
+}
+
+/* フッターを中央揃え */
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    background-color: #333;
+    color: #fff;
+}
+
+/* フッター内のリンク風表示 */
+.view-link {
+    cursor: pointer;
+    color: #00f;
+    text-decoration: underline;
+    margin: 0 5px;
+}
+
+.view-link:hover {
+    color: #0056b3;
+    text-decoration: none;
+}
