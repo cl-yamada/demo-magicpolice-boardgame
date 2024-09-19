@@ -1,9 +1,11 @@
+/* 全ての要素に対する基本設定 */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+/* ボディの基本スタイル */
 body {
     font-family: 'Arial', sans-serif;
     line-height: 1.6;
@@ -28,21 +30,25 @@ header {
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
+/* ヘッダー内の見出し */
 header h1 {
     font-size: 20px;
     margin-left: 20px;
 }
 
+/* ナビゲーションのリスト */
 nav ul {
     list-style: none;
     display: flex;
     margin-right: 20px;
 }
 
+/* ナビゲーションのリストアイテム */
 nav ul li {
     margin-left: 20px;
 }
 
+/* ナビゲーションのリンク */
 nav ul li a {
     color: #fff;
     text-decoration: none;
@@ -51,6 +57,7 @@ nav ul li a {
     transition: background 0.3s ease;
 }
 
+/* ナビゲーションのリンクホバー時 */
 nav ul li a:hover {
     background-color: #555;
     border-radius: 5px;
@@ -62,11 +69,13 @@ nav ul li a:hover {
     margin: 100px 0; /* ヘッダー分のスペースを確保 */
 }
 
+/* ロゴ画像 */
 .logo img {
     max-width: 300px;
     height: auto;
 }
 
+/* プロローグセクション */
 .prologue {
     width: 100vw;
     height: 100vh;
@@ -76,10 +85,13 @@ nav ul li a:hover {
     position: relative;
 }
 
+/* プロローグ画像 */
 .prologue img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+    width: auto; /* 画像の幅を自動に */
+    height: auto; /* 画像の高さを自動に */
+    max-width: 100%; /* 画像の最大幅を100%に */
+    max-height: 100%; /* 画像の最大高さを100%に */
+    object-fit: contain; /* 画像をコンテナ内に収める */
     position: absolute;
     top: 0;
     left: 0;
@@ -91,6 +103,7 @@ nav ul li a:hover {
     margin-bottom: 40px;
 }
 
+/* 遊び方とエンディングの画像 */
 .how-to-play img, .ending img {
     max-width: 100%;
     height: auto;
@@ -104,52 +117,61 @@ nav ul li a:hover {
     align-items: center;
 }
 
+/* QRコードの各項目 */
 .ending .qr-codes div {
     margin-bottom: 20px;
 }
 
 /* レスポンシブデザイン - スマホ版のスタイル */
 @media screen and (max-width: 768px) {
+    /* スマホ版のヘッダー */
     header {
         flex-direction: column; /* ヘッダー内の要素を縦に並べる */
         align-items: flex-start;
         padding: 10px;
     }
 
+    /* スマホ版のヘッダー見出し */
     header h1 {
         font-size: 18px;
         margin: 0 0 10px 0;
     }
 
+    /* スマホ版のナビゲーション */
     nav ul {
         flex-direction: column; /* ナビゲーションのリンクを縦に並べる */
         margin-right: 0;
     }
 
+    /* スマホ版のナビゲーションリストアイテム */
     nav ul li {
         margin-left: 0;
         margin-bottom: 10px;
     }
 
+    /* スマホ版のナビゲーションリンク */
     nav ul li a {
         font-size: 14px;
         padding: 8px 12px;
     }
 
+    /* スマホ版のロゴ画像 */
     .logo img {
         max-width: 200px; /* ロゴサイズを小さめに */
     }
 
+    /* スマホ版のセクション */
     .prologue, .how-to-play, .ending {
         margin-bottom: 20px;
     }
 
+    /* スマホ版の遊び方とエンディング画像 */
     .how-to-play img, .ending img {
         margin-bottom: 5px;
     }
 }
 
-/* レスンシブデザイン - PC版のスタイル */
+/* レスポンシブデザイン - PC版のスタイル */
 @media screen and (min-width: 769px) {
     /* PC向けのスタイル調整 */
     .prologue, .how-to-play, .ending {
@@ -157,6 +179,7 @@ nav ul li a:hover {
         margin: 0 auto;
     }
     
+    /* PC版のロゴ */
     .logo {
         margin: 50px 0;
     }
@@ -169,7 +192,7 @@ footer {
     justify-content: center;
     align-items: center;
     padding: 20px;
-    background-color: #333;
+    background: none;
     color: #fff;
 }
 
@@ -181,6 +204,7 @@ footer {
     margin: 0 5px;
 }
 
+/* フッター内のリンクホバー時 */
 .view-link:hover {
     color: #ddd; /* ホバー時に少し灰色がかった色に */
     text-decoration: none;
