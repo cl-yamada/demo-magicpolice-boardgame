@@ -154,6 +154,56 @@ nav ul li a:hover {
     margin-bottom: 20px;
 }
 
+/* ダウンロードセクション */
+.download {
+    text-align: center;
+    margin-bottom: 40px;
+}
+/* ダウンロードボタン画像 */
+.pdf-download {
+    position: relative;
+    display: inline-block;
+}
+.pdf-download img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+    transition: opacity 0.3s ease; /* 画像の切り替えをスムーズにするためのトランジション */
+}
+.pdf-download img.download-btn-hover {
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    width: 100%; /* 追加: 幅を100%に設定 */
+    height: 100%; /* 追加: 高さを100%に設定 */
+}
+.pdf-download:hover img.download-btn-hover {
+    opacity: 1;
+    width: 100%; /* 追加: 幅を100%に設定 */
+    height: 100%; /* 追加: 高さを100%に設定 */
+}
+.pdf-download:hover img.download-btn {
+    opacity: 0;
+    width: 100%; /* 追加: 幅を100%に設定 */
+    height: 100%; /* 追加: 高さを100%に設定 */
+}
+
+/* 本の表裏 */
+.book_omote, .book_ura{
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+/* book_omoteとbook_uraの画像 */
+.book_omote img, .book_ura img {
+    max-width: 50%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
 /* レスポンシブデザイン - スマホ版のスタイル */
 @media screen and (max-width: 768px) {
     /* スマホ版のヘッダー */
