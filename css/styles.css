@@ -78,28 +78,18 @@ nav ul li a:hover {
     object-fit: contain;
 }
 
-/* プロローグセクション */
-.prologue {
-    width: 100vw;
-    height: 100vh;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-    position: relative;
+/* ストーリーセクション */
+.story {
     text-align: center;
     margin-bottom: 40px;
 }
 
-/* プロローグ画像 */
-.prologue img {
-    width: auto; /* 画像の幅を自動に */
-    height: auto; /* 画像の高さを自動に */
-    max-width: 100%; /* 画像の最大幅を100%に */
-    max-height: 100%; /* 画像の最大高さを100%に */
-    object-fit: contain; /* 画像をコンテナ内に収める */
-    position: absolute;
-    top: 0;
-    left: 0;
+/* ストーリー画像 */
+.story img {
+    min-width: 50%;
+    max-width: 70%;
+    height: auto;
+    margin-bottom: 10px;
 }
 
 /* 遊び方 */
@@ -110,7 +100,7 @@ nav ul li a:hover {
 
 /* 遊び方の画像 */
 .how-to-play img {
-    max-width: 100%;
+    max-width: 70%;
     height: auto;
     margin-bottom: 10px;
 }
@@ -123,7 +113,7 @@ nav ul li a:hover {
 
 /* ゲームの進め方の画像 */
 .game-flow img {
-    max-width: 100%;
+    max-width: 70%;
     height: auto;
     margin-bottom: 10px;
 }
@@ -137,7 +127,7 @@ nav ul li a:hover {
 
 /* エンディングの画像 */
 .ending img {
-    max-width: 100%;
+    max-width: 70%;
     height: auto;
     margin-bottom: 10px;
 }
@@ -165,6 +155,7 @@ nav ul li a:hover {
     display: inline-block;
 }
 .pdf-download img {
+    min-width: 50%;
     max-width: 100%;
     height: auto;
     display: block;
@@ -198,73 +189,16 @@ nav ul li a:hover {
 
 /* book_omoteとbook_uraの画像 */
 .book_omote img, .book_ura img {
-    max-width: 50%;
+    min-width: 50%;
+    max-width: 75%;
     height: auto;
     display: block;
     margin: 0 auto;
 }
 
-/* レスポンシブデザイン - スマホ版のスタイル */
-@media screen and (max-width: 768px) {
-    /* スマホ版のヘッダー */
-    header {
-        flex-direction: column; /* ヘッダー内の要素を縦に並べる */
-        align-items: flex-start;
-        padding: 10px;
-    }
-
-    /* スマホ版のヘッダー見出し */
-    header h1 {
-        font-size: 18px;
-        margin: 0 0 10px 0;
-    }
-
-    /* スマホ版のナビゲーション */
-    nav ul {
-        flex-direction: column; /* ナビゲーションのリンクを縦に並べる */
-        margin-right: 0;
-    }
-
-    /* スマホ版のナビゲーションリストアイテム */
-    nav ul li {
-        margin-left: 0;
-        margin-bottom: 10px;
-    }
-
-    /* スマホ版のナビゲーションリンク */
-    nav ul li a {
-        font-size: 14px;
-        padding: 8px 12px;
-    }
-
-    /* スマホ版のロゴ画像 */
-    .logo img {
-        max-width: 200px; /* ロゴサイズを小さめに */
-    }
-
-    /* スマホ版のセクション */
-    .prologue, .how-to-play, .game-flow, .ending {
-        margin-bottom: 20px;
-    }
-
-    /* スマホ版の遊び方とエンディング画像 */
-    .how-to-play img, .game-flow img, .ending img {
-        margin-bottom: 5px;
-    }
-}
-
-/* レスポンシブデザイン - PC版のスタイル */
-@media screen and (min-width: 769px) {
-    /* PC向けのスタイル調整 */
-    .prologue, .how-to-play, .game-flow, .ending {
-        max-width: 1200px;
-        margin: 0 auto;
-    }
-    
-    /* PC版のロゴ */
-    .logo {
-        margin: 50px 0;
-    }
+.line-white {
+    text-align: center;
+    margin-bottom: 40px;
 }
 
 /* フッターを中央揃え */
@@ -297,4 +231,71 @@ footer {
     margin-top: 10px;
     font-size: 12px;
     color: #bbb; /* バージョン情報を少し目立たなくする */
+}
+
+/* 注意書きの文字サイズを小さくする */
+.notice {
+    font-size: 0.8em; /* 例: 文字サイズを80%に設定 */
+}
+
+/* YouTube動画セクション */
+.video-container {
+    position: relative;
+    width: 100%;
+    padding-bottom: 56.25%; /* 16:9のアスペクト比 */
+    overflow: hidden;
+    margin-bottom: 40px;
+}
+.video-container iframe {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 70%;
+    height: 70%;
+}
+
+/* モーダルのスタイル */
+.modal {
+    display: none; /* デフォルトでは非表示 */
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.8); /* 背景を半透明に */
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    margin: auto;
+    display: block;
+    max-width: 80%;
+    max-height: 80%;
+    animation: fadeIn 0.3s; /* ふわっと表示 */
+}
+
+.close {
+    position: absolute;
+    top: 20px;
+    right: 35px;
+    color: #fff;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.close:hover,
+.close:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+@keyframes fadeIn {
+    from {opacity: 0;}
+    to {opacity: 1;}
 }

@@ -37,6 +37,8 @@
                 <span></span>
             </div>
             <ul id="nav-links">
+                <li><a href="#story">ストーリー</a></li>
+                <li><a href="#book-download">カード冊子ダウンロード</a></li>
                 <li><a href="#how-to-play">遊び方</a></li>
                 <li><a href="#ending">エンディング</a></li>
             </ul>
@@ -48,13 +50,25 @@
         <img src="assets/main_logo.png" alt="タイトルロゴ">
     </div>
 
-    <!-- プロローグ -->
-    <section class="prologue">
-        <img src="assets/1_story.png" alt="プロローグ">
+    <!-- YouTube動画セクション -->
+    <section class="youtube-video">
+        <div class="video-container">
+            <iframe width="1260" height="708" src="https://www.youtube.com/embed/hoGp8nVQmb4" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+    </section>
+
+    <!-- ストーリー -->
+    <section class="story">
+        <img src="assets/section_story.png" alt="ストーリー">
+        <img src="assets/1_story.png" alt="ストーリー">
     </section>
 
     <!-- 冊子 表-->
     <section class="book_omote">
+        <img src="assets/section_story.png" alt="ストーリー">
+    </section>
+    <section class="book_omote">
+        <img src="assets/section_story.png" alt="ストーリー">
         <img src="assets/book_omote_low.png" alt="冊子">
     </section>
     <section class="download">
@@ -68,6 +82,7 @@
     
     <!-- 冊子 裏-->
     <section class="book_ura">
+        <img src="assets/section_story.png" alt="ストーリー">
         <img src="assets/book_ura_low.png" alt="冊子">
     </section>
     <section class="download">
@@ -81,19 +96,28 @@
 
     <!-- 遊び方 -->
     <section id="how-to-play" class="how-to-play">
+        <img src="assets/section_assets.png" alt="内容物">
         <img src="assets/2_assets.png" alt="内容物">
+        <img src="assets/section_how_to_play.png" alt="遊び方">
         <img src="assets/3_how_to_play.png" alt="遊び方">
+        <img src="assets/section_conditions.png" alt="終了条件">
         <img src="assets/4_conditions.png" alt="終了条件">
+        <img src="assets/section_setup.png" alt="ゲームの準備">
         <img src="assets/5_setup.png" alt="ゲームの準備">
     </section>
 
     <!-- ゲームの進め方 -->
     <section id="game-flow" class="game-flow">
+        <img src="assets/section_game_flow.png" alt="ゲームの進め方">
         <img src="assets/6_ingame_1.png" alt="ゲームの進め方">
         <img src="assets/7_ingame_2.png" alt="ゲームの進め方">
         <img src="assets/8_ingame_3.png" alt="ゲームの進め方">
         <img src="assets/9_ingame_4.png" alt="ゲームの進め方">
-        <img src="assets/10_ingame_5.png" alt="ゲームの進め方">
+        <img src="assets/10_ingame_5to6.png" alt="ゲームの進め方">
+        <img src="assets/11_ingame_7to10.png" alt="ゲームの進め方">
+        <img src="assets/12_ingame_11to14.png" alt="ゲームの進め方">
+        <img src="assets/13_ingame_15to17.png" alt="ゲームの進め方">
+        <img src="assets/14_solo_play.png" alt="ひとりで遊ぶとき">
     </section>
 
     
@@ -109,88 +133,75 @@
 
     <!-- エンディング -->
     <section id="ending" class="ending">
-        <h2>エンディング</h2>
+        <img src="assets/section_ending.png" alt="エンディング">
+        <img src="assets/15_ending.png" alt="エンディング">
         <div class="qr-codes">
             <div>
                 <a href="https://www.youtube.com/watch?v=hoGp8nVQmb4" target="_blank">
                 <p>2枚獲得したとき</p>
                 </a>
-                <img src="assets/qr_code1.png" alt="QRコード1">
+                <img src="assets/qr_code1.png" alt="QRコード1" class="modal-trigger">
             </div>
             <div>
                 <a href="https://www.youtube.com/watch?v=hoGp8nVQmb4" target="_blank">
                 <p>1枚獲得したとき</p>
                 </a>
-                <img src="assets/qr_code2.png" alt="QRコード2">
+                <img src="assets/qr_code2.png" alt="QRコード2" class="modal-trigger">
             </div>
             <div>
                 <a href="https://www.youtube.com/watch?v=hoGp8nVQmb4" target="_blank">
                 <p>0枚獲得したとき</p>
                 </a>
-                <img src="assets/qr_code3.png" alt="QRコード3">
+                <img src="assets/qr_code3.png" alt="QRコード3" class="modal-trigger">
             </div>
         </div>
     </section>
 
+    <!-- モーダルの構造 -->
+    <div id="qrModal" class="modal">
+        <span class="close">&times;</span>
+        <img class="modal-content" id="modalImage">
+    </div>
+
     <!-- ページフッター -->
     <footer>
-        <p id="view-switcher">
-            <span id="toggle-view" class="view-link">PC版に切り替え</span> <!-- ここが動的に切り替わる -->
-        </p>
-        <p id="version-info">サイトバージョン: v1.0.1</p> <!-- バージョン情報を表示 -->
+        <div class="line-white">
+            <img src="assets/line_white.png" alt="line_white">
+        </div>
+        <p class="notice">当サイトの内容、テキスト、画像等の無断転載・無断使用を固く禁じます。</p>
+        <!-- <p id="version-info">サイトバージョン: v1.0.1</p> -->
         <!-- 権利表記を追加 -->
         <p id="copyright">© Roman Kitayama. All rights reserved.</p>
     </footer>
 
+
+    <!-- 画像クリックしたらモーダルっぽく出るやつの処理 -->
     <script>
-        // ハンバーガーメニューの開閉
-        const hamburgerMenu = document.getElementById('hamburger-menu');
-        const navLinks = document.getElementById('nav-links');
-        hamburgerMenu.addEventListener('click', () => {
-            navLinks.classList.toggle('open');
-        });
+    // モーダル要素を取得
+    var modal = document.getElementById("qrModal");
+    var modalImg = document.getElementById("modalImage");
+    var closeBtn = document.getElementsByClassName("close")[0];
 
-        // 閲覧環境を表示し、切り替えるスクリプト
-        const toggleViewLink = document.getElementById('toggle-view');
-        const mobileStylesheet = document.getElementById('mobile-stylesheet');
-        const pcStylesheet = document.getElementById('pc-stylesheet');
-
-        // 初期状態を判定（スマホ版かPC版か）
-        let isMobileView = window.innerWidth <= 768;
-
-        // 初期表示に応じてボタンのテキストを設定
-        function updateToggleText() {
-            if (isMobileView) {
-                toggleViewLink.textContent = 'PC版に切り替え';
-            } else {
-                toggleViewLink.textContent = 'スマホ版に切り替え';
-            }
+    // モーダルトリガー画像をクリックしたときの処理
+    var modalTriggers = document.getElementsByClassName("modal-trigger");
+    for (var i = 0; i < modalTriggers.length; i++) {
+        modalTriggers[i].onclick = function() {
+            modal.style.display = "flex";
+            modalImg.src = this.src;
         }
+    }
 
-        // ビューの切り替え
-        function toggleView() {
-            isMobileView = !isMobileView;
+    // モーダルを閉じるボタンの処理
+    closeBtn.onclick = function() {
+        modal.style.display = "none";
+    }
 
-            if (isMobileView) {
-                // スマホ版を有効にし、PC版を無効にする
-                mobileStylesheet.disabled = false;
-                pcStylesheet.disabled = true;
-            } else {
-                // PC版を有効にし、スマホ版を無効にする
-                mobileStylesheet.disabled = true;
-                pcStylesheet.disabled = false;
-            }
-
-            // ボタンのテキストを更新
-            updateToggleText();
+    // モーダルの外側をクリックしたときの処理
+    window.onclick = function(event) {
+        if (event.target == modal) {
+            modal.style.display = "none";
         }
-
-        // 初期表示の設定
-        updateToggleText();
-
-        // ボタンをクリックしたときに表示を切り替える
-        toggleViewLink.addEventListener('click', toggleView);
-    </script>
-
+    }
+</script>
 </body>
 </html>
