@@ -63,35 +63,39 @@
         <img src="assets/1_story.png" alt="ストーリー">
     </section>
 
-    <!-- 冊子 表-->
-    <section class="book_omote">
-        <img src="assets/section_story.png" alt="ストーリー">
-    </section>
-    <section class="book_omote">
-        <img src="assets/section_story.png" alt="ストーリー">
-        <img src="assets/book_omote_low.png" alt="冊子">
-    </section>
-    <section class="download">
-        <div class="pdf-download">
-            <a href="assets/pdf_book_omote.pdf" target="_blank" rel="noopener noreferrer" title="ボードゲーム版魔法捜査官_ルールブック">
-                <img src="assets/btn_download.png" alt="ダウンロードアイコン" class="download-btn">
-                <img src="assets/btn_download_hover.png" alt="ダウンロードアイコン（ホバー時）" class="download-btn-hover">
-            </a>
-        </div>
-    </section>
-    
-    <!-- 冊子 裏-->
-    <section class="book_ura">
-        <img src="assets/section_story.png" alt="ストーリー">
-        <img src="assets/book_ura_low.png" alt="冊子">
-    </section>
-    <section class="download">
-        <div class="pdf-download">
-            <a href="assets/pdf_book_ura.pdf" target="_blank" rel="noopener noreferrer" title="ボードゲーム版魔法捜査官_ルールブック">
-                <img src="assets/btn_download.png" alt="ダウンロードアイコン" class="download-btn">
-                <img src="assets/btn_download_hover.png" alt="ダウンロードアイコン（ホバー時）" class="download-btn-hover">
-            </a>
-        </div>
+    <!-- 冊子 表と冊子 裏を横並びにするためのコンテナ -->
+    <section class="book">
+    <img src="assets/section_story.png" alt="ストーリー">
+    <div class="book-container">
+        <section class="book_omote">
+            <img src="assets/section_story.png" alt="ストーリー">
+            <section class="book_omote_img">
+                <img src="assets/book_omote_low.png" alt="冊子">
+            </section>
+            <section class="download">
+                <div class="pdf-download">
+                    <a href="assets/pdf_book_omote.pdf" target="_blank" rel="noopener noreferrer" title="ボードゲーム版魔法捜査官_ルールブック">
+                        <img src="assets/btn_download.png" alt="ダウンロードアイコン" class="download-btn">
+                        <img src="assets/btn_download_hover.png" alt="ダウンロードアイコン（ホバー時）" class="download-btn-hover">
+                    </a>
+                </div>
+            </section>
+        </section>
+        <section class="book_ura">
+            <img src="assets/section_story.png" alt="ストーリー">
+            <section class="book_ura_img">
+                <img src="assets/book_ura_low.png" alt="冊子">
+            </section>
+            <section class="download">
+                <div class="pdf-download">
+                    <a href="assets/pdf_book_omote.pdf" target="_blank" rel="noopener noreferrer" title="ボードゲーム版魔法捜査官_ルールブック">
+                        <img src="assets/btn_download.png" alt="ダウンロードアイコン" class="download-btn">
+                        <img src="assets/btn_download_hover.png" alt="ダウンロードアイコン（ホバー時）" class="download-btn-hover">
+                    </a>
+                </div>
+            </section>
+        </section>
+    </div>
     </section>
 
     <!-- 遊び方 -->
@@ -108,7 +112,7 @@
 
     <!-- ゲームの進め方 -->
     <section id="game-flow" class="game-flow">
-        <img src="assets/section_game_flow.png" alt="ゲームの進め方">
+        <img src="assets/section_game_flow.png" alt="ゲームの進め方" id="section-game-flow">
         <img src="assets/6_ingame_1.png" alt="ゲームの進め方">
         <img src="assets/7_ingame_2.png" alt="ゲームの進め方">
         <img src="assets/8_ingame_3.png" alt="ゲームの進め方">
@@ -138,19 +142,19 @@
         <div class="qr-codes">
             <div>
                 <a href="https://www.youtube.com/watch?v=hoGp8nVQmb4" target="_blank">
-                <p>2枚獲得したとき</p>
+                <p class="ending-title">エンディング①</p>
                 </a>
                 <img src="assets/qr_code1.png" alt="QRコード1" class="modal-trigger">
             </div>
             <div>
                 <a href="https://www.youtube.com/watch?v=hoGp8nVQmb4" target="_blank">
-                <p>1枚獲得したとき</p>
+                <p class="ending-title">エンディング②</p>
                 </a>
                 <img src="assets/qr_code2.png" alt="QRコード2" class="modal-trigger">
             </div>
             <div>
                 <a href="https://www.youtube.com/watch?v=hoGp8nVQmb4" target="_blank">
-                <p>0枚獲得したとき</p>
+                <p class="ending-title">エンディング③</p>
                 </a>
                 <img src="assets/qr_code3.png" alt="QRコード3" class="modal-trigger">
             </div>
