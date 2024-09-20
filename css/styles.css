@@ -70,10 +70,12 @@ nav ul li a:hover {
     margin: 100px 0; /* ヘッダー分のスペースを確保 */
 }
 
-/* ロゴ画像 */
+/* タイトルロゴ */
 .logo img {
-    max-width: 300px;
+    width: 50%;
+    max-width: 50%;
     height: auto;
+    object-fit: contain;
 }
 
 /* プロローグセクション */
@@ -84,6 +86,8 @@ nav ul li a:hover {
     padding: 0;
     overflow: hidden;
     position: relative;
+    text-align: center;
+    margin-bottom: 40px;
 }
 
 /* プロローグ画像 */
@@ -98,14 +102,41 @@ nav ul li a:hover {
     left: 0;
 }
 
-/* セクションのデザイン */
-.prologue, .how-to-play, .ending {
+/* 遊び方 */
+.how-to-play {
     text-align: center;
     margin-bottom: 40px;
 }
 
-/* 遊び方とエンディングの画像 */
-.how-to-play img, .ending img {
+/* 遊び方の画像 */
+.how-to-play img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+/* ゲームの進め方 */
+.game-flow {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+/* ゲームの進め方の画像 */
+.game-flow img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+/* エンディング */
+.ending {
+    text-align: center;
+    margin-bottom: 40px;
+    color: #fff;
+}
+
+/* エンディングの画像 */
+.ending img {
     max-width: 100%;
     height: auto;
     margin-bottom: 10px;
@@ -162,12 +193,12 @@ nav ul li a:hover {
     }
 
     /* スマホ版のセクション */
-    .prologue, .how-to-play, .ending {
+    .prologue, .how-to-play, .game-flow, .ending {
         margin-bottom: 20px;
     }
 
     /* スマホ版の遊び方とエンディング画像 */
-    .how-to-play img, .ending img {
+    .how-to-play img, .game-flow img, .ending img {
         margin-bottom: 5px;
     }
 }
@@ -175,7 +206,7 @@ nav ul li a:hover {
 /* レスポンシブデザイン - PC版のスタイル */
 @media screen and (min-width: 769px) {
     /* PC向けのスタイル調整 */
-    .prologue, .how-to-play, .ending {
+    .prologue, .how-to-play, .game-flow, .ending {
         max-width: 1200px;
         margin: 0 auto;
     }
