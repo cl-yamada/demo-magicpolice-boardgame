@@ -226,6 +226,13 @@ nav ul li a:hover {
     text-align: center;
     margin-bottom: 40px;
 }
+.line-white img {
+    min-width: 50%;
+    max-width: 100%; /* 幅を100%に設定 */
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
 
 /* フッターを中央揃え */
 footer {
