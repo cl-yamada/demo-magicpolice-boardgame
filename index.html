@@ -31,17 +31,20 @@
     <header>
         <img src="assets/img-logo.png" alt="ボードゲーム版 魔法捜査官">
         <nav>
-            <div id="hamburger-menu">
-                <span></span>
-                <span></span>
-                <span></span>
+            <div class="hamburger-menu">
+                <input type="checkbox" id="menu-btn-check">
+                <label for="menu-btn-check" class="menu-btn"><span></span></label>
+                <!--ここからメニュー-->
+                <div class="menu-content">
+                    <ul>
+                        <li><a href="#story">ストーリー</a></li>
+                        <li><a href="#book">カード冊子ダウンロード</a></li>
+                        <li><a href="#how-to-play">遊び方</a></li>
+                        <li><a href="#ending">エンディング</a></li>
+                    </ul>
+                </div>
+                <!--ここまでメニュー-->
             </div>
-            <ul id="nav-links">
-                <li><a href="#story">ストーリー</a></li>
-                <li><a href="#book-download">カード冊子ダウンロード</a></li>
-                <li><a href="#how-to-play">遊び方</a></li>
-                <li><a href="#ending">エンディング</a></li>
-            </ul>
         </nav>
     </header>
 
@@ -58,13 +61,13 @@
     </section>
 
     <!-- ストーリー -->
-    <section class="story">
+    <section id="story" class="story">
         <img src="assets/section_story.png" alt="ストーリー">
         <img src="assets/1_story.png" alt="ストーリー">
     </section>
 
     <!-- 冊子 表と冊子 裏を横並びにするためのコンテナ -->
-    <section class="book">
+    <section id="book" class="book">
     <img src="assets/section_story.png" alt="ストーリー">
     <div class="book-container">
         <section class="book_omote">
