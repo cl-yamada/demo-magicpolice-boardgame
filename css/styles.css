@@ -449,3 +449,10 @@ footer {
     height: auto;
     margin-bottom: 100px;
 }
+
+/* エンディング動画 */
+.ending-video-title {
+    width: 30%;
+    height: auto;
+}
+
