@@ -429,11 +429,23 @@ footer {
     gap: 20px; /* セクション間のスペースを調整 */
 }
 .ending-videos video {
-    width: 30%;
+    width: 40%;
     height: auto;
     margin-bottom: 100px;
 }
 
 .local-video {
     margin-bottom: 0%;
+}
+
+/* 冊子 */
+.book-section-title {
+    width: 70%;
+    height: auto;
+    margin-bottom: 100px;
+}
+.book-section-subtitle {
+    width: 70%;
+    height: auto;
+    margin-bottom: 100px;
 }
