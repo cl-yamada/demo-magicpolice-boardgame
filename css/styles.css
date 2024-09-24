@@ -136,21 +136,6 @@ nav ul li a:hover {
     margin-bottom: 10px;
 }
 
-/* エンディング内のQRコードを縦並びにする */
-.ending .qr-codes {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center; /* 水平方向のセンタリング */
-    gap: 10%; /* 項目間の間隔を広げる */
-}
-
-/* QRコードの各項目 */
-.ending .qr-codes div {
-    margin-bottom: 20px;
-    text-align: center; /* 各項目の内容を中央揃え */
-}
-
 /* ダウンロードセクション */
 .download {
     text-align: center;
@@ -433,4 +418,22 @@ footer {
     position: absolute;
     right: 11px;
     top: 16px;
+}
+
+/* エンディング動画 */
+.ending-videos {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px; /* セクション間のスペースを調整 */
+}
+.ending-videos video {
+    width: 30%;
+    height: auto;
+    margin-bottom: 100px;
+}
+
+.local-video {
+    margin-bottom: 0%;
 }
